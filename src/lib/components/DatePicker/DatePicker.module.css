@@ -1,0 +1,82 @@
+.datePickerContainer {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 2px 5px #00000029;
+  border-radius: 4px;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.previousButton {
+  border: none;
+  outline: none;
+  height: 4vh;
+  width: 100px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #2e75b5;
+  margin: 0.1em 0.4em;
+  box-shadow: 0px 0px 0px transparent;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  opacity: 1;
+  background: transparent;
+}
+
+.previousButton:hover {
+  background: #e7ebf1 0% 0% no-repeat padding-box;
+}
+
+.selectedPrevious {
+  background: #e7ebf1 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 0px transparent;
+}
+
+.circularButton {
+  padding: 0.88em;
+  height: 31px;
+  box-sizing: border-box;
+  border-radius: 50px;
+  min-width: 0;
+  font-size: 11.3px;
+  font-weight: bold;
+  letter-spacing: 0px;
+  color: #cdd4e0;
+  margin: 0.5em;
+  background: #e7ebf1 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 0px transparent;
+}
+
+.circularButton:hover {
+  background: #cdd4e0 0% 0% no-repeat padding-box;
+  color: #2162ac;
+}
+
+.selectedDate {
+  color: #2162ac;
+  box-shadow: 0px 3px 3px #00000029;
+}
+
+.monthOfSelectedDate {
+  display: inline-block;
+  min-width: 7vw;
+  width: 7vw;
+  margin: 0.5em;
+  margin-left: 0em;
+  text-align: center;
+  font-size: 1.3em/1.6em;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+}
+
+.noDateRangeGiven {
+  display: inline-block;
+  width: auto;
+  margin: 0.5em;
+  font-size: 1.3em/1.6em;
+  letter-spacing: 0px;
+  color: #707070;
+  opacity: 1;
+}

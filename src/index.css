@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.MuiSwitch-track {
+  background-color: #fff !important;
+  border: solid 1px #707070 !important;
+  height: 10px;
+  margin-top: 2px;
+  width: 29px;
+}
+.MuiSwitch-thumb {
+  width: 14px;
+  height: 14px;
+  font-size: 10px;
+  margin-top: 3.5px;
+}
+
+textarea {
+  font-family: 'Open Sans', sans-serif;
+}

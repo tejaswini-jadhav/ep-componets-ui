@@ -1,0 +1,36 @@
+{
+  "name": "ep-componets-ui",
+  "version": "1.0.0",
+  "description": "ep ui components",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [ "dist", "README.md" ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tejaswini-jadhav/ep-componets-ui.git"
+  },
+  "keywords": [
+    "ep", "react", "components", "ui"
+  ],
+  "author": "tml",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tejaswini-jadhav/ep-componets-ui/issues"
+  },
+  "homepage": "https://github.com/tejaswini-jadhav/ep-componets-ui#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "realm": "enterprise",
+  "auth-server-url": "https://auth.ep-dev.tatamotors.com/auth/",
+  "ssl-required": "external",
+  "resource": "supply-chain",
+  "public-client": true,
+  "confidential-port": 0
+}
