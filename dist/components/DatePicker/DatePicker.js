@@ -15,8 +15,6 @@ var _clsx = _interopRequireDefault(require("clsx"));
 
 var _Button = _interopRequireDefault(require("../Button/Button"));
 
-var _utils = require("../../utils/utils");
-
 var _DatePickerModule = _interopRequireDefault(require("./DatePicker.module.css"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -25,6 +23,19 @@ const getMonthForStartDate = startDate => {
   var _startDate$format;
 
   return (startDate === null || startDate === void 0 ? void 0 : (_startDate$format = startDate.format) === null || _startDate$format === void 0 ? void 0 : _startDate$format.call(startDate, 'MMMM')) || ' - - ';
+};
+
+const getDatesForRange = (startDate, endDate) => {
+  const startDateCopy = (0, _moment.default)(startDate, 'YYYY-MM-DD');
+  const endDateCopy = (0, _moment.default)(endDate, 'YYYY-MM-DD');
+  const dates = [];
+
+  while (startDateCopy.isSameOrBefore(endDateCopy, 'day')) {
+    dates.push((0, _moment.default)(startDateCopy));
+    startDateCopy.add(1, 'days');
+  }
+
+  return dates;
 };
 
 const DatePicker = _ref => {
@@ -43,7 +54,7 @@ const DatePicker = _ref => {
   }, "Previous"), /*#__PURE__*/_react.default.createElement("span", {
     className: _DatePickerModule.default.monthOfSelectedDate,
     id: "month"
-  }, selectedDate && !selectedDate.isSame((0, _moment.default)(0)) ? selectedDate.format('MMMM') : getMonthForStartDate(startDate)), startDate && endDate ? (0, _utils.getDatesForRange)(startDate, endDate).map(date => /*#__PURE__*/_react.default.createElement(_Button.default, {
+  }, selectedDate && !selectedDate.isSame((0, _moment.default)(0)) ? selectedDate.format('MMMM') : getMonthForStartDate(startDate)), startDate && endDate ? getDatesForRange(startDate, endDate).map(date => /*#__PURE__*/_react.default.createElement(_Button.default, {
     key: date.format('DD-MMM'),
     className: date.isSame(selectedDate, 'day') ? (0, _clsx.default)(_DatePickerModule.default.circularButton, _DatePickerModule.default.selectedDate) : _DatePickerModule.default.circularButton,
     onClick: () => handleSelectedDate(date)
