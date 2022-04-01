@@ -3,11 +3,22 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import clsx from 'clsx';
 import Button from '../Button/Button';
-import { getDatesForRange } from '../../utils/utils';
 import styles from './DatePicker.module.css';
 
 const getMonthForStartDate = startDate =>
   startDate?.format?.('MMMM') || ' - - ';
+
+const getDatesForRange = (startDate, endDate) => {
+  const startDateCopy = moment(startDate, 'YYYY-MM-DD');
+  const endDateCopy = moment(endDate, 'YYYY-MM-DD');
+
+  const dates = [];
+  while (startDateCopy.isSameOrBefore(endDateCopy, 'day')) {
+    dates.push(moment(startDateCopy));
+    startDateCopy.add(1, 'days');
+  }
+  return dates;
+};
 
 const DatePicker = ({
   startDate,
